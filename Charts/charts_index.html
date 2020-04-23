@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Works</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="charts.js"></script>
+    <link rel="stylesheet" href="charts_styles.css">
+</head>
+
+<body>
+    <div class="container mt-5" id="mainContainer">
+        <h4>Customize your charts here</h4>
+        <div class="d-flex mt-3">
+            <div class="form-group mr-5">
+                <label for="barType">Select Bar Type</label>
+                <select id="barType" onchange="changeBarType(this)" class="form-control">
+                    <option selected>Bar</option>
+                    <option>Line</option>
+                    <option>Pie</option>
+                    <option>Doughnut</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="chartLabel">Chart Label</label>
+                <input class="form-control chartLabel" placeholder="Chart Label" id="chartLabel">
+            </div>
+            <div class="form-group ml-5">
+                <label for="hasZeroStart" style="margin-bottom: 1em;">Start From Zero</label>
+                <input class="d-block hasZeroStart" type="checkbox" id="hasZeroStart">
+            </div>
+        </div>
+
+        <h5 class="mb-3">Configure your chart</h5>
+        <div id="customizations">
+            <div class="customize-area d-flex">
+                <div class="form-group customize mr-5">
+                    <label for="dataSetLabel">DataSet Label</label>
+                    <input class="form-control label" placeholder="Label" id="dataSetLabel">
+                </div>
+                <div class="form-group mr-5 customize">
+                    <label for="dataSetData">DataSet Data</label>
+                    <input class="form-control data" placeholder="Data" id="dataSetData">
+                </div>
+                <div class="form-group align-self-center mr-5 customize">
+                    <label for="dataSetColor">Color</label>
+                    <input class="d-block" style="height: 35px;
+                width: 40px;" type="color" id="dataSetColor">
+                </div>
+                <div class="form-group align-self-center" style="margin-top: 2em">
+                    <button class="btn btn-danger form-control" onclick="deleteRow(this)">Delete</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="addbtn" onclick="AddData()">+ Add data</button>
+        <button class="btn btn-success" onclick="GenerateChart()">Generate Chart</button>
+        <canvas id="myChart" class="d-block mt-3 mb-5"></canvas>
+    </div>
+</body>
+
+</html>
