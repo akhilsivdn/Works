@@ -24,8 +24,8 @@
 <body>
     <div class="container mt-5" id="mainContainer">
         <h4>Customize your charts here</h4>
-        <div class="d-flex mt-3">
-            <div class="form-group mr-5">
+        <div class="row mt-3">
+            <div class="form-group col-sm-4">
                 <label for="barType">Select Bar Type</label>
                 <select id="barType" onchange="changeBarType(this)" class="form-control">
                     <option selected>Bar</option>
@@ -34,11 +34,11 @@
                     <option>Doughnut</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group col-sm-4">
                 <label for="chartLabel">Chart Label</label>
                 <input class="form-control chartLabel" placeholder="Chart Label" id="chartLabel">
             </div>
-            <div class="form-group ml-5">
+            <div class="form-group col-sm-4">
                 <label for="hasZeroStart" style="margin-bottom: 1em;">Start From Zero</label>
                 <input class="d-block hasZeroStart" type="checkbox" id="hasZeroStart">
             </div>

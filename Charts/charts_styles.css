@@ -27,3 +27,7 @@
     background: var(--primary);
     left: 30px;
 }
+
+.customize-area{
+    flex-wrap: wrap;
+}

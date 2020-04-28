@@ -8,6 +8,8 @@ html, body {
     top: 0;
     left: 0;
     right: 0;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .hero-image {
@@ -23,7 +25,7 @@ html, body {
 }
 
 .mountain {
-    background-image: url("https://live.staticflickr.com/5615/15355896600_7adc7b3b7f_k.jpg");
+    background-image: url("https://lp-cms-production.imgix.net/2019-06/12dec8938220093eb7f1fdb8a9ce40b8-the-rocky-mountains.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4");
 }
 
 .hero-text {
@@ -35,13 +37,8 @@ html, body {
     color: black;
 }
 
-.navbar-container {
-    justify-content: center;
-    display: flex;
-}
-
 li.nav-item {
-    margin-right: 2em;
+    margin-right: 1em;
 }
 
 li.nav-item:hover {
