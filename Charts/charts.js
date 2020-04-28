@@ -47,10 +47,10 @@ function AddData() {
     var template = `
         <div class="customize-area d-flex">
             <div class="form-group customize mr-5">
-                <input class="form-control label" placeholder="Label">
+                <input class="form-control label" placeholder="DataSet Label">
             </div>
             <div class="form-group mr-5 customize">
-                <input class="form-control data"  placeholder="Data">
+                <input class="form-control data"  placeholder="DataSet Data">
             </div>
             <div class="form-group align-self-center mr-5 customize">
                 <input class="d-block" style="height: 35px;
